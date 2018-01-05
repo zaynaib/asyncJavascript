@@ -42,7 +42,6 @@ gameDiv.append(
 )
 
 //append it to the body
-$("body").append('<p>hello</p>')
 $("body").append(gameDiv);
 
 /*
@@ -50,12 +49,27 @@ $("body").append(gameDiv);
     FUNCTIONS
 
 */
+/*
+randomly distribute the matching pairs of values among the cells
+turn the blue cells orange when a mouse is hovering over
+turn the blue cells red and reveal their hidden number when clicked
+start the elapsed time counter when the first cell is clicked 
+*/
+
+var num = [];
+for(var i = 0 ;i<9;i++){
+    let randomNum = Math.ceil(Math.random()*5)    
+    console.log(randomNum)
+    num.append(randomNum)
+}
+console.log(num)
+
 
 //create a reveal function for the table boxes
 
 //if a user clicks on a table cell show what's is inside
     $(".hide").click(function(){
-        $(".one").hide();
+        $(this).hide();
     })
 
 
@@ -71,6 +85,7 @@ $("body").append(gameDiv);
 
 */
 
+/*
 //create a timer function
 var count = 0;
 var timer = setInterval(function(){
@@ -83,3 +98,5 @@ var timer = setInterval(function(){
     }
     
 },1000)
+
+*/
